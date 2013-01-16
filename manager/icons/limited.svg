@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="16px" width="16px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <defs>
+  <linearGradient id="c" y2="7.3054" gradientUnits="userSpaceOnUse" y1="7.3054" x2="13.59" x1=".91642">
+   <stop stop-color="#fee1e1" offset="0"/>
+   <stop stop-color="#f16262" offset="1"/>
+  </linearGradient>
+  <linearGradient id="d" y2="12.785" gradientUnits="userSpaceOnUse" y1="2.8226" x2="13.163" x1="3.3257">
+   <stop stop-color="#e46c6c" offset="0"/>
+   <stop stop-color="#d60000" stop-opacity=".96471" offset="1"/>
+  </linearGradient>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/"/>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Nils Maier</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:rights>
+     <cc:Agent>
+      <dc:title>Nils Maier</dc:title>
+     </cc:Agent>
+    </dc:rights>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <path fill="url(#d)" transform="matrix(1.0857 0 0 1.0857 -.70406 -.85529)" d="m15.047 8.1389a7.0953 7.0953 0 1 1 -14.191 0 7.0953 7.0953 0 1 1 14.191 0z"/>
+ <path fill="url(#c)" transform="matrix(1.1425 0 0 1.1425 -.31275 -.32022)" d="m13.064 7.3054a5.8114 5.8114 0 1 1 -11.623 0 5.8114 5.8114 0 1 1 11.623 0z"/>
+ <path fill="#fff" transform="matrix(1.3191 0 0 1.2998 -2.7397 -2.6678)" d="m12.208 8.274a4.0545 4.0319 0 1 1 -8.1089 0 4.0545 4.0319 0 1 1 8.1089 0z"/>
+ <rect ry=".015927" height=".031855" width=".19113" y="5.0738" x="7.3266" fill="#4a833e"/>
+</svg>

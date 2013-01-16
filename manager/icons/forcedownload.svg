@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="16px" width="16px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <defs>
+  <linearGradient id="d" y2="7.3054" gradientUnits="userSpaceOnUse" y1="7.3054" x2="13.59" x1=".91642">
+   <stop stop-color="#e3f4e0" offset="0"/>
+   <stop stop-color="#99cc87" offset="1"/>
+  </linearGradient>
+  <linearGradient id="e" y2="12.785" gradientUnits="userSpaceOnUse" y1="2.8226" x2="13.163" x1="3.3257">
+   <stop stop-color="#87b870" stop-opacity=".68715" offset="0"/>
+   <stop stop-color="#36722e" stop-opacity=".96471" offset="1"/>
+  </linearGradient>
+  <radialGradient id="f" gradientUnits="userSpaceOnUse" cy="5.0175" cx="12.337" gradientTransform="matrix(-.80429 -.99646 .90141 -.74944 14.395 25.017)" r="4.0545">
+   <stop stop-color="#65ab55" offset="0"/>
+   <stop stop-color="#65ab55" stop-opacity=".18889" offset="1"/>
+  </radialGradient>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Nils Maier</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:rights>
+     <cc:Agent>
+      <dc:title>Nils Maier</dc:title>
+     </cc:Agent>
+    </dc:rights>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <path fill="url(#e)" transform="matrix(1.0857 0 0 1.0857 -.70406 -.85529)" d="m15.047 8.1389a7.0953 7.0953 0 1 1 -14.191 0 7.0953 7.0953 0 1 1 14.191 0z"/>
+ <path fill="url(#d)" transform="matrix(1.1425 0 0 1.1425 -.31275 -.32022)" d="m13.064 7.3054a5.8114 5.8114 0 1 1 -11.623 0 5.8114 5.8114 0 1 1 11.623 0z"/>
+ <path fill="url(#f)" transform="matrix(1.392 0 0 1.3716 -3.3539 -3.2815)" d="m12.208 8.274a4.0545 4.0319 0 1 1 -8.1089 0 4.0545 4.0319 0 1 1 8.1089 0z"/>
+ <path transform="matrix(0 .83487 -.83487 0 11.604 3.8369)" d="m9.361 7.4536-4.2323-1e-7h-4.2323l2.1161-3.6653 2.1161-3.6653 2.1162 3.6653 2.1162 3.6653z" fill="#fff"/>
+ <text stroke-width=".3" font-size="18px" font-weight="bold" stroke-opacity=".4186" xml:space="preserve" stroke="#000000" y="15.554033" x="10.161684" font-family="Garamond Premr Pro Smbd" fill="#ff0000"><tspan font-weight="bold" stroke-opacity=".4186" stroke="#000000" font-family="Arial" y="15.554033" x="10.161684" stroke-width=".3">!</tspan></text>
+</svg>

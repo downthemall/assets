@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="16px" width="16px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Nils Maier</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:rights>
+     <cc:Agent>
+      <dc:title>Nils Maier</dc:title>
+     </cc:Agent>
+    </dc:rights>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <path d="m10.94 15.572a5.3575 3.3111 0 1 1 -10.715 0 5.3575 3.3111 0 1 1 10.715 0z" transform="matrix(1.3348 0 0 2.1597 .54827 -21.831)" stroke-dashoffset="10" stroke="#072739" stroke-linecap="round" fill="#fff"/>
+ <path d="m7.5 3.8125v3.5625c0.1668-0.0187 0.3282-0.0625 0.5-0.0625s0.3332 0.0438 0.5 0.0625v-3.5625h-1zm-3.0625 0.8125l-0.875 0.5 1.7813 3.0625c0.2581-0.1881 0.548-0.3696 0.8437-0.5l-1.75-3.0625zm7.1245 0l-1.7495 3.0625c0.2955 0.1304 0.5855 0.3119 0.8435 0.5l1.782-3.0625-0.876-0.5zm-10.25 2.75l-0.5 0.875 3.0625 1.75c0.1304-0.2957 0.3119-0.5856 0.5-0.8438l-3.0625-1.7812zm13.376 0l-3.063 1.7812c0.188 0.2582 0.37 0.5481 0.5 0.8438l3.063-1.75-0.5-0.875zm-14.688 3.937v1h3.5625c-0.0187-0.166-0.0625-0.328-0.0625-0.5 0-0.171 0.0438-0.333 0.0625-0.5h-3.5625zm12.438 0c0.018 0.167 0.062 0.329 0.062 0.5 0 0.172-0.044 0.334-0.062 0.5h3.562v-1h-3.562zm-8.563 2.313l-3.0625 1.75 0.5 0.875 3.0625-1.781c-0.1881-0.258-0.3696-0.548-0.5-0.844zm8.25 0c-0.13 0.296-0.312 0.586-0.5 0.844l3.063 1.781 0.5-0.875-3.063-1.75zm-7.9375 3.813l-0.625 1.062 0.625 0.344v-1.406zm7.6875 0.093v1.281l0.563-0.312-0.563-0.969z" fill="#072739"/>
+</svg>
