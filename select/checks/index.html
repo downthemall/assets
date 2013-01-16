@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+</head>
+<body>
+  <figure data-dims="16">
+    <img src="checked.svg">
+    <img src="unchecked.svg">
+    <img src="remchecked.svg">
+  </figure>
+  <figure data-dims="12">
+    <img src="checked12.svg">
+    <img src="unchecked12.svg">
+  </figure>
+  <script>
+    for (var fig of document.querySelectorAll("figure")) {
+      var imgs = fig.querySelectorAll("img");
+      var h = parseInt(fig.dataset.dims,10);
+      var w = h * imgs.length;
+      var canvas = document.createElement("canvas");
+      canvas.setAttribute("width", w);
+      canvas.setAttribute("height", h);
+      fig.appendChild(canvas);
+      canvas.style.border = "1px solid red";
+      canvas.style.display = "block";
+      canvas.clientWidth = w;
+      canvas.clientHeight = h;
+      var ctx = canvas.getContext("2d");
+      var x = 0;
+      for (var i of imgs) {
+        ctx.drawImage(i, x, 0);
+        x += h;
+      }
+      var a = document.createElement("a");
+      a.href = canvas.toDataURL("image/png");
+      a.textContent = "buttons" + h + ".png";
+      a.setAttribute("download", a.textContent);
+      fig.appendChild(a);
+    }
+  </script>
+</body>
