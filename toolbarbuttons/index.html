@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+</head>
+<body>
+  <figure data-dims="16">
+    <img src="dtahover16.png">
+    <img src="dtanormal16.png">
+    <img src="turbohover16.png">
+    <img src="turbonormal16.png">
+    <img src="selectorhover16.png">
+    <img src="selectornormal16.png">
+    <img src="manager16.png">
+    <img src="about.png">
+  </figure>
+  <figure data-dims="24">
+    <img src="dtahover24.png">
+    <img src="dtanormal24.png">
+    <img src="turbohover24.png">
+    <img src="turbonormal24.png">
+    <img src="selectorhover24.png">
+    <img src="selectornormal24.png">
+    <img src="manager24.png">
+  </figure>
+  <script>
+    for (var fig of document.querySelectorAll("figure")) {
+      var imgs = fig.querySelectorAll("img");
+      var h = parseInt(fig.dataset.dims,10);
+      var w = h * imgs.length;
+      var canvas = document.createElement("canvas");
+      canvas.setAttribute("width", w);
+      canvas.setAttribute("height", h);
+      fig.appendChild(canvas);
+      canvas.style.border = "1px solid red";
+      canvas.style.display = "block";
+      canvas.clientWidth = w;
+      canvas.clientHeight = h;
+      var ctx = canvas.getContext("2d");
+      var x = 0;
+      for (var i of imgs) {
+        ctx.drawImage(i, x, 0);
+        x += h;
+      }
+      var a = document.createElement("a");
+      a.href = canvas.toDataURL("image/png");
+      a.textContent = "buttons" + h + ".png";
+      a.setAttribute("download", a.textContent);
+      fig.appendChild(a);
+    }
+  </script>
+</body>
