@@ -10,13 +10,13 @@
    <stop stop-color="#e49218" offset=".2"/>
    <stop stop-color="#116597" offset="1"/>
   </linearGradient>
-  <radialGradient id="p" xlink:href="#b" gradientUnits="userSpaceOnUse" cy="17.413" cx="11.75" gradientTransform="matrix(.41233 0 0 1.1548 3.2391 -8.7397)" r="10.752"/>
-  <linearGradient id="j" x1="8.1008" xlink:href="#b" gradientUnits="userSpaceOnUse" y1="4.2182" gradientTransform="matrix(.67870 0 0 .67870 2.4953 -6.3418)" x2="7.7629" y2="-.24151"/>
-  <linearGradient id="k" x1="8.1008" xlink:href="#b" gradientUnits="userSpaceOnUse" y1="4.2182" gradientTransform="matrix(.67870 0 0 .67870 2.4953 -1.8821)" x2="7.7629" y2="-.24151"/>
-  <linearGradient id="l" x1="8.1008" xlink:href="#a" gradientUnits="userSpaceOnUse" y1="4.2182" gradientTransform="matrix(.43866 0 0 .43866 7.0809 4.1804)" x2="7.7629" y2="-.24151"/>
-  <linearGradient id="m" x1="8.1008" xlink:href="#a" gradientUnits="userSpaceOnUse" y1="4.2182" gradientTransform="matrix(.43866 0 0 .43866 7.6574 1.298)" x2="7.7629" y2="-.24151"/>
-  <linearGradient id="n" x1="8.1008" xlink:href="#a" gradientUnits="userSpaceOnUse" y1="4.2182" gradientTransform="matrix(.43866 0 0 .43866 1.8514 4.1804)" x2="7.7629" y2="-.24151"/>
-  <linearGradient id="o" x1="8.1008" xlink:href="#a" gradientUnits="userSpaceOnUse" y1="4.2182" gradientTransform="matrix(.43866 0 0 .43866 1.8514 1.298)" x2="7.7629" y2="-.24151"/>
+  <radialGradient id="c" xlink:href="#b" gradientUnits="userSpaceOnUse" cy="17.413" cx="11.75" gradientTransform="matrix(.41233 0 0 1.1548 3.2391 -8.7397)" r="10.752"/>
+  <linearGradient id="i" y2="-.24151" xlink:href="#b" gradientUnits="userSpaceOnUse" x2="7.7629" gradientTransform="matrix(.67870 0 0 .67870 2.4953 -6.3418)" y1="4.2182" x1="8.1008"/>
+  <linearGradient id="h" y2="-.24151" xlink:href="#b" gradientUnits="userSpaceOnUse" x2="7.7629" gradientTransform="matrix(.67870 0 0 .67870 2.4953 -1.8821)" y1="4.2182" x1="8.1008"/>
+  <linearGradient id="g" y2="-.24151" xlink:href="#a" gradientUnits="userSpaceOnUse" x2="7.7629" gradientTransform="matrix(.43866 0 0 .43866 7.0809 4.1804)" y1="4.2182" x1="8.1008"/>
+  <linearGradient id="f" y2="-.24151" xlink:href="#a" gradientUnits="userSpaceOnUse" x2="7.7629" gradientTransform="matrix(.43866 0 0 .43866 7.6574 1.298)" y1="4.2182" x1="8.1008"/>
+  <linearGradient id="e" y2="-.24151" xlink:href="#a" gradientUnits="userSpaceOnUse" x2="7.7629" gradientTransform="matrix(.43866 0 0 .43866 1.8514 4.1804)" y1="4.2182" x1="8.1008"/>
+  <linearGradient id="d" y2="-.24151" xlink:href="#a" gradientUnits="userSpaceOnUse" x2="7.7629" gradientTransform="matrix(.43866 0 0 .43866 1.8514 1.298)" y1="4.2182" x1="8.1008"/>
  </defs>
  <metadata>
   <rdf:RDF>
@@ -40,17 +40,17 @@
  </metadata>
  <g stroke="#072739">
   <g stroke-width=".64633">
-   <path d="m4.561 7.1339v1.5148h-2.5651v0.26257l2.9489 3.3326 2.6661 3.0498h0.98969l2.6863-3.0498 2.8479-3.2518v-0.34336h-2.7267v-1.5148h-6.847z" fill="url(#p)"/>
+   <path d="m4.561 7.1339v1.5148h-2.5651v0.26257l2.9489 3.3326 2.6661 3.0498h0.98969l2.6863-3.0498 2.8479-3.2518v-0.34336h-2.7267v-1.5148h-6.847z" fill="url(#c)"/>
    <g stroke-linecap="round" stroke-dashoffset="10" fill-rule="evenodd">
-    <rect y="1.3458" width="1.6489" height="1.6489" x="4.5623" fill="url(#o)"/>
-    <rect y="4.2282" width="1.6489" height="1.6489" x="4.5623" fill="url(#n)"/>
-    <rect y="1.3458" width="1.6489" height="1.6489" x="10.368" fill="url(#m)"/>
-    <rect y="4.2282" width="1.6489" height="1.6489" x="9.7918" fill="url(#l)"/>
+    <rect y="1.3458" width="1.6489" fill="url(#d)" x="4.5623" height="1.6489"/>
+    <rect y="4.2282" width="1.6489" fill="url(#e)" x="4.5623" height="1.6489"/>
+    <rect y="1.3458" width="1.6489" fill="url(#f)" x="10.368" height="1.6489"/>
+    <rect y="4.2282" width="1.6489" fill="url(#g)" x="9.7918" height="1.6489"/>
    </g>
   </g>
-  <g stroke-dashoffset="10" stroke-linecap="round" transform="matrix(.64633 0 0 .64633 2.874 4.6145)" fill-rule="evenodd">
-   <rect y="-6.2679" width="2.5511" height="2.5511" x="6.6895" fill="url(#j)"/>
-   <rect y="-1.8082" width="2.5511" height="2.5511" x="6.6895" fill="url(#k)"/>
+  <g fill-rule="evenodd" stroke-linecap="round" stroke-dashoffset="10" transform="matrix(.64633 0 0 .64633 2.874 4.6145)">
+   <rect y="-6.2679" width="2.5511" fill="url(#i)" x="6.6895" height="2.5511"/>
+   <rect y="-1.8082" width="2.5511" fill="url(#h)" x="6.6895" height="2.5511"/>
   </g>
  </g>
 </svg>

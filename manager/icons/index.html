@@ -24,53 +24,108 @@
   </style>
 </head>
 <body>
-  <figure data-states="two">
-    <img src="download.svg">
-    <img src="forcedownload.svg">
-    <img src="pause.svg">
-    <img src="cancel.svg">
-  </figure>
-  <figure data-states="two">
-    <img src="top.svg">
-    <img src="up.svg">
-    <img src="down.svg">
-    <img src="bottom.svg">
-  </figure>
-  <figure data-states="two">
-    <img src="done.svg">
-    <img src="verified.svg">
-    <img src="retrying.svg">
-    <img src="failed.svg">
-  </figure>
-  <figure data-states="two">
-    <img src="info.svg">
-    <img src="gone.svg">
-    <img src="dupes.svg">
-  </figure>
-  <figure data-states="two">
-    <img src="launch.png">
-    <img src="folder.png">
-    <img src="delete.png">
-    <img src="import.png">
-    <img src="export.png">
-  </figure>
-  <figure data-states="two">
-    <img src="advanced.svg">
-    <img src="addpart.png">
-    <img src="rempart.png">
-    <img src="mirrors.png">
-  </figure>
-  <figure data-states="one">
-    <img src="limited.svg">
-    <img src="limited12.svg">
-    <img src="unlimited.svg">
-    <img src="unlimited12.svg">
-  </figure>
-  <figure data-states="one">
-    <img src="incoming.svg">
-    <img src="tachometer.svg">
-    <img src="edit-find.png">
-  </figure>
+  <section id="normal" data-dims="16">
+    <figure data-states="two">
+      <img src="download.png">
+      <img src="forcedownload.png">
+      <img src="pause.png">
+      <img src="cancel.png">
+    </figure>
+    <figure data-states="two">
+      <img src="top.png">
+      <img src="up.png">
+      <img src="down.png">
+      <img src="bottom.png">
+    </figure>
+    <figure data-states="two">
+      <img src="done.png">
+      <img src="verified.png">
+      <img src="retrying.png">
+      <img src="failed.png">
+    </figure>
+    <figure data-states="two">
+      <img src="info.png">
+      <img src="gone.png">
+      <img src="dupes.png">
+    </figure>
+    <figure data-states="two">
+      <img src="launch.png">
+      <img src="folder.png">
+      <img src="delete.png">
+      <img src="import.png">
+      <img src="export.png">
+    </figure>
+    <figure data-states="two">
+      <img src="advanced.png">
+      <img src="addpart.png">
+      <img src="rempart.png">
+      <img src="mirrors.png">
+    </figure>
+    <figure data-states="one">
+      <img src="limited.png">
+      <img src="limited12.png">
+      <img src="unlimited.png">
+      <img src="unlimited12.png">
+    </figure>
+    <figure data-states="one">
+      <img src="incoming.png">
+      <img src="tachometer.png">
+      <img src="edit-find.png">
+      <img src="schedule.png">
+      <img src="schedule-disabled.png">
+    </figure>
+  </section>
+  <section id="2x" data-dims="32">
+    <figure data-states="two">
+      <img src="download@2x.png">
+      <img src="forcedownload@2x.png">
+      <img src="pause@2x.png">
+      <img src="cancel@2x.png">
+    </figure>
+    <figure data-states="two">
+      <img src="top@2x.png">
+      <img src="up@2x.png">
+      <img src="down@2x.png">
+      <img src="bottom@2x.png">
+    </figure>
+    <figure data-states="two">
+      <img src="done@2x.png">
+      <img src="verified@2x.png">
+      <img src="retrying@2x.png">
+      <img src="failed@2x.png">
+    </figure>
+    <figure data-states="two">
+      <img src="info@2x.png">
+      <img src="gone@2x.png">
+      <img src="dupes@2x.png">
+    </figure>
+    <figure data-states="two">
+      <img src="launch@2x.png">
+      <img src="folder@2x.png">
+      <img src="delete@2x.png">
+      <img src="import@2x.png">
+      <img src="export@2x.png">
+    </figure>
+    <figure data-states="two">
+      <img src="advanced@2x.png">
+      <img src="addpart@2x.png">
+      <img src="rempart@2x.png">
+      <img src="mirrors@2x.png">
+    </figure>
+    <figure data-states="one">
+      <img src="limited@2x.png">
+      <img src="limited12@2x.png">
+      <img src="unlimited@2x.png">
+      <img src="unlimited12@2x.png">
+    </figure>
+    <figure data-states="one">
+      <img src="incoming@2x.png">
+      <img src="tachometer@2x.png">
+      <img src="edit-find@2x.png">
+      <img src="schedule@2x.png">
+      <img src="schedule-disabled@2x.png">
+    </figure>
+  </section>
   <script>
     function grayscale(img) {
       var canvas = document.createElement("canvas");
@@ -105,53 +160,55 @@
         i.id = i.getAttribute("src").replace(/()\..*?$/, "");
       }
 
-      var figs = Array.map($$("figure"), function(e) e);
-      var rows = figs.length;
-      var rrows = figs.map(function(e) e.dataset.states == "two" ? 2 : 1).reduce(function(p,c) p + c, 0);
-      var cols = figs.map(function(e) $$("img", e).length).reduce(function(p,c) Math.max(p,c), 0);
-      console.log(rows, rrows, cols);
+      for (var sec of $$("section")) {
+        var dims = parseInt(sec.dataset.dims, 10);
+        var figs = Array.map($$("figure", sec), function(e) e);
+        var rows = figs.length;
+        var rrows = figs.map(function(e) e.dataset.states == "two" ? 2 : 1).reduce(function(p,c) p + c, 0);
+        var cols = figs.map(function(e) $$("img", e).length).reduce(function(p,c) Math.max(p,c), 0);
 
-      var canvas = document.createElement("canvas");
-      canvas.setAttribute("height", rrows * 16);
-      canvas.setAttribute("width", cols * 16);
-      document.body.appendChild(canvas);
-      canvas.style.display = "block";
-      canvas.style.border = "1px solid red";
+        var canvas = document.createElement("canvas");
+        canvas.setAttribute("height", rrows * dims);
+        canvas.setAttribute("width", cols * dims);
+        sec.appendChild(canvas);
+        canvas.style.display = "block";
+        canvas.style.border = "1px solid red";
 
-      var items = {};
-      var ctx = canvas.getContext("2d");
-      var y = 0;
-      for (var row of figs) {
-        var dis = row.dataset.states == "two";
-        var x = 0;
-        for (var i of $$("img", row)) {
-          ctx.drawImage(i, x, y);
-          var region = {top:y, bottom: y+i.height, left:x, right: x+i.width};
-          items[i.id] = region;
-          if (dis) {
-            ctx.save();
-            ctx.globalAlpha = 0.6;
-            ctx.drawImage(grayscale(i), x, y + 16);
-            ctx.restore();
-            var region = {top:y+16, bottom: y+16+i.height, left:x, right: x+i.width};
-            items[i.id + " disabled"] = region;
+        var items = {};
+        var ctx = canvas.getContext("2d");
+        var y = 0;
+        for (var row of figs) {
+          var dis = row.dataset.states == "two";
+          var x = 0;
+          for (var i of $$("img", row)) {
+            ctx.drawImage(i, x, y);
+            var region = {top:y, bottom: y+i.height, left:x, right: x+i.width};
+            items[i.id] = region;
+            if (dis) {
+              ctx.save();
+              ctx.globalAlpha = 0.6;
+              ctx.drawImage(grayscale(i), x, y + dims);
+              ctx.restore();
+              var region = {top:y+dims, bottom: y+dims+i.height, left:x, right: x+i.width};
+              items[i.id + " disabled"] = region;
+            }
+            x += dims;
           }
-          x += 16;
+          y += dis ? dims * 2 : dims;
         }
-        y += dis ? 32 :16;
-      }
 
-      figs.forEach(function(e) e.parentNode.removeChild(e));
-      var ul = document.createElement("ul");
-      ul.style.listStyleType = "none";
-      var bi = canvas.toDataURL("image/png");
-      for (var [c,r] in Iterator(items)) {
-        var li = document.createElement("li");
-        li.style.backgroundImage = "-moz-image-rect(url(" + bi + ")," + r.top + "," + r.right + "," + r.bottom + "," + r.left + ")";
-        li.innerHTML = "<p>" + c + "</p><p><code>rect(" + r.top + "px," + r.right + "px," + r.bottom + "px," + r.left + "px)</code></p>";
-        ul.appendChild(li);
+        //figs.forEach(function(e) e.parentNode.removeChild(e));
+        var ul = document.createElement("ul");
+        ul.style.listStyleType = "none";
+        var bi = canvas.toDataURL("image/png");
+        for (var [c,r] in Iterator(items)) {
+          var li = document.createElement("li");
+          li.style.backgroundImage = "-moz-image-rect(url(" + bi + ")," + r.top + "," + r.right + "," + r.bottom + "," + r.left + ")";
+          li.innerHTML = "<p>" + c + "</p><p><code>rect(" + r.top + "px," + r.right + "px," + r.bottom + "px," + r.left + "px)</code></p>";
+          ul.appendChild(li);
+        }
+        sec.appendChild(ul);
       }
-      document.body.appendChild(ul);
     }, false);
   </script>
 </body>

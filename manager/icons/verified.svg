@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="16px" width="16px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
  <defs>
-  <linearGradient id="d" y2="7.3054" gradientUnits="userSpaceOnUse" y1="7.3054" x2="13.59" x1=".91642">
+  <linearGradient id="c" y2="7.3054" gradientUnits="userSpaceOnUse" x2="13.59" y1="7.3054" x1=".91642">
    <stop stop-color="#e3f4e0" offset="0"/>
    <stop stop-color="#99cc87" offset="1"/>
   </linearGradient>
-  <linearGradient id="e" y2="12.785" gradientUnits="userSpaceOnUse" y1="2.8226" x2="13.163" x1="3.3257">
+  <linearGradient id="b" y2="12.785" gradientUnits="userSpaceOnUse" x2="13.163" y1="2.8226" x1="3.3257">
    <stop stop-color="#87b870" stop-opacity=".68715" offset="0"/>
    <stop stop-color="#36722e" stop-opacity=".96471" offset="1"/>
   </linearGradient>
-  <radialGradient id="f" gradientUnits="userSpaceOnUse" cy="5.0175" cx="12.337" gradientTransform="matrix(-.80429 -.99646 .90141 -.74944 14.395 25.017)" r="4.0545">
+  <radialGradient id="a" gradientUnits="userSpaceOnUse" cy="5.0175" cx="12.337" gradientTransform="matrix(-.80429 -.99646 .90141 -.74944 14.395 25.017)" r="4.0545">
    <stop stop-color="#65ab55" offset="0"/>
    <stop stop-color="#65ab55" stop-opacity=".18889" offset="1"/>
   </radialGradient>
@@ -42,17 +42,17 @@
    </cc:License>
   </rdf:RDF>
  </metadata>
- <path fill="url(#e)" transform="matrix(1.0857 0 0 1.0857 -.70406 -.85529)" d="m15.047 8.1389a7.0953 7.0953 0 1 1 -14.191 0 7.0953 7.0953 0 1 1 14.191 0z"/>
- <path fill="url(#d)" transform="matrix(1.1425 0 0 1.1425 -.31275 -.32022)" d="m13.064 7.3054a5.8114 5.8114 0 1 1 -11.623 0 5.8114 5.8114 0 1 1 11.623 0z"/>
- <path fill="url(#f)" transform="matrix(1.392 0 0 1.3716 -3.3539 -3.2815)" d="m12.208 8.274a4.0545 4.0319 0 1 1 -8.1089 0 4.0545 4.0319 0 1 1 8.1089 0z"/>
+ <path d="m15.047 8.1389a7.0953 7.0953 0 1 1 -14.191 0 7.0953 7.0953 0 1 1 14.191 0z" transform="matrix(1.0857 0 0 1.0857 -.70406 -.85529)" fill="url(#b)"/>
+ <path d="m13.064 7.3054a5.8114 5.8114 0 1 1 -11.623 0 5.8114 5.8114 0 1 1 11.623 0z" transform="matrix(1.1425 0 0 1.1425 -.31275 -.32022)" fill="url(#c)"/>
+ <path d="m12.208 8.274a4.0545 4.0319 0 1 1 -8.1089 0 4.0545 4.0319 0 1 1 8.1089 0z" transform="matrix(1.392 0 0 1.3716 -3.3539 -3.2815)" fill="url(#a)"/>
  <g transform="translate(.76451 .41411)" fill="#fff">
-  <rect y="-1.0402" width="2.4847" height="7.1992" transform="rotate(30)" x="10.461"/>
-  <rect y="7.2883" width="2.485" height="5" transform="rotate(-60.001)" x="-6.1484"/>
+  <rect y="-1.0402" width="2.4847" x="10.461" transform="rotate(30)" height="7.1992"/>
+  <rect y="7.2883" width="2.485" x="-6.1484" transform="rotate(-60.001)" height="5"/>
  </g>
  <g transform="translate(.046784 .15483)">
   <g fill="#f00">
-   <rect y="7.8452" width="2.5" x="10.703" height="8"/>
-   <rect y="7.9532" width="2.5" height="8" transform="rotate(-90)" x="-13.095"/>
+   <rect y="7.8452" width="2.5" height="8" x="10.703"/>
+   <rect y="7.9532" width="2.5" x="-13.095" transform="rotate(-90)" height="8"/>
   </g>
  </g>
 </svg>

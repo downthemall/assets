@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+set -u
+
+for x in *.svg; do
+  if [[ "$x" == *12.svg ]]; then
+    /Applications/Inkscape.app/Contents/Resources/bin/inkscape -C -w 12 -f $x -e ${x/.svg/.png};
+    /Applications/Inkscape.app/Contents/Resources/bin/inkscape -C -w 24 -f $x -e ${x/.svg/@2x.png};
+  else
+    /Applications/Inkscape.app/Contents/Resources/bin/inkscape -C -w 16 -f $x -e ${x/.svg/.png};
+    /Applications/Inkscape.app/Contents/Resources/bin/inkscape -C -w 32 -f $x -e ${x/.svg/@2x.png};
+  fi;
+done;
+

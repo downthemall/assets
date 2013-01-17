@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="16px" width="16px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
  <defs>
-  <linearGradient id="e" y2="7.3054" gradientUnits="userSpaceOnUse" y1="7.3054" x2="13.59" x1=".91642">
+  <linearGradient id="b" y2="7.3054" gradientUnits="userSpaceOnUse" x2="13.59" y1="7.3054" x1=".91642">
    <stop stop-color="#e3f4e0" offset="0"/>
    <stop stop-color="#99cc87" offset="1"/>
   </linearGradient>
-  <linearGradient id="f" y2="12.785" gradientUnits="userSpaceOnUse" y1="2.8226" x2="13.163" x1="3.3257">
+  <linearGradient id="a" y2="12.785" gradientUnits="userSpaceOnUse" x2="13.163" y1="2.8226" x1="3.3257">
    <stop stop-color="#87b870" stop-opacity=".68715" offset="0"/>
    <stop stop-color="#36722e" stop-opacity=".96471" offset="1"/>
   </linearGradient>
-  <linearGradient id="d" y2="8.0156" gradientUnits="userSpaceOnUse" y1="8.0156" x2="14.531" x1="1.375">
+  <linearGradient id="c" y2="8.0156" gradientUnits="userSpaceOnUse" x2="14.531" y1="8.0156" x1="1.375">
    <stop stop-color="#87b870" stop-opacity=".89385" offset="0"/>
    <stop stop-color="#36722e" stop-opacity=".96471" offset="1"/>
   </linearGradient>
@@ -42,10 +42,10 @@
    </cc:License>
   </rdf:RDF>
  </metadata>
- <path fill="url(#f)" transform="matrix(1.0857 0 0 1.0857 -.70406 -.85529)" d="m15.047 8.1389a7.0953 7.0953 0 1 1 -14.191 0 7.0953 7.0953 0 1 1 14.191 0z"/>
- <path fill="url(#e)" transform="matrix(1.1425 0 0 1.1425 -.31275 -.32022)" d="m13.064 7.3054a5.8114 5.8114 0 1 1 -11.623 0 5.8114 5.8114 0 1 1 11.623 0z"/>
- <path fill="#fff" transform="matrix(1.392 0 0 1.3716 -3.3539 -3.2815)" d="m12.208 8.274a4.0545 4.0319 0 1 1 -8.1089 0 4.0545 4.0319 0 1 1 8.1089 0z"/>
- <g fill="url(#d)">
+ <path d="m15.047 8.1389a7.0953 7.0953 0 1 1 -14.191 0 7.0953 7.0953 0 1 1 14.191 0z" transform="matrix(1.0857 0 0 1.0857 -.70406 -.85529)" fill="url(#a)"/>
+ <path d="m13.064 7.3054a5.8114 5.8114 0 1 1 -11.623 0 5.8114 5.8114 0 1 1 11.623 0z" transform="matrix(1.1425 0 0 1.1425 -.31275 -.32022)" fill="url(#b)"/>
+ <path d="m12.208 8.274a4.0545 4.0319 0 1 1 -8.1089 0 4.0545 4.0319 0 1 1 8.1089 0z" transform="matrix(1.392 0 0 1.3716 -3.3539 -3.2815)" fill="#fff"/>
+ <g fill="url(#c)">
   <path d="m8.7812 1.4375l-7.4062 7.375c0.1004 0.867 0.3485 1.6745 0.75 2.4065l9.031-9.0002-0.031-0.0313c-0.716-0.3892-1.4988-0.6476-2.3438-0.75z"/>
   <path d="m11.781 2.625l-9.2185 9.219c0.4297 0.609 0.9256 1.159 1.5313 1.594l9.2812-9.2818c-0.434-0.6056-0.985-1.1015-1.594-1.5312z"/>
   <path d="m13.719 4.75l-8.969 8.969 0.25 0.25c0.6302 0.316 1.3061 0.523 2.0312 0.625l7.4998-7.5002c-0.12-0.8495-0.403-1.6293-0.812-2.3438z"/>
