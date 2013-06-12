@@ -1,41 +1,134 @@
 <!DOCTYPE html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style type="text/css">
+    * {
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+    }
+    ul, li, p {
+      margin: 0;
+      padding: 0;
+      list-style-type: 0;
+    }
+    ul {
+      margin-top: 2em;
+    }
+    li {
+      padding: 1ex;
+      padding-left: -moz-calc(22px + 1ex);
+      margin-bottom: 1em;
+      background-position: 1ex center;
+      background-repeat: no-repeat;
+    }
+  </style>
 </head>
 <body>
-  <figure data-dims="16">
-    <img src="checked.svg">
-    <img src="unchecked.svg">
-    <img src="remchecked.svg">
-  </figure>
-  <figure data-dims="12">
-    <img src="checked12.svg">
-    <img src="unchecked12.svg">
-  </figure>
+  <section id="normal" data-dims="16">
+    <figure data-states="one">
+      <img src="checked.png">
+      <img src="unchecked.png">
+      <img src="remchecked.png">
+    </figure>
+    <figure data-states="one">
+      <img src="checked12.png">
+      <img src="unchecked12.png">
+    </figure>
+  </section>
+  <section id="2x" data-dims="32">
+    <figure data-states="one">
+      <img src="checked@2x.png">
+      <img src="unchecked@2x.png">
+      <img src="remchecked@2x.png">
+    </figure>
+    <figure data-states="one">
+      <img src="checked12@2x.png">
+      <img src="unchecked12@2x.png">
+    </figure>
+  </section>
   <script>
-    for (var fig of document.querySelectorAll("figure")) {
-      var imgs = fig.querySelectorAll("img");
-      var h = parseInt(fig.dataset.dims,10);
-      var w = h * imgs.length;
+    function grayscale(img) {
       var canvas = document.createElement("canvas");
-      canvas.setAttribute("width", w);
-      canvas.setAttribute("height", h);
-      fig.appendChild(canvas);
-      canvas.style.border = "1px solid red";
-      canvas.style.display = "block";
-      canvas.clientWidth = w;
-      canvas.clientHeight = h;
-      var ctx = canvas.getContext("2d");
-      var x = 0;
-      for (var i of imgs) {
-        ctx.drawImage(i, x, 0);
-        x += h;
+      var ctx = canvas.getContext('2d');
+      var rv = new Image();
+      rv.src = img.src;
+      var w = canvas.width = rv.width;
+      var h = canvas.height = rv.height; 
+      ctx.drawImage(rv, 0, 0); 
+      var pix = ctx.getImageData(0, 0, w, h);
+          
+      for (var y = 0; y < h; y++) {
+        for (var x = 0; x < w; x++) {
+          var i = (y * 4) * w + x * 4;
+          var avg = (pix.data[i] + pix.data[i + 1] + pix.data[i + 2]) / 3;
+          pix.data[i] = avg; 
+          pix.data[i + 1] = avg; 
+          pix.data[i + 2] = avg;
+        }
       }
-      var a = document.createElement("a");
-      a.href = canvas.toDataURL("image/png");
-      a.textContent = "buttons" + h + ".png";
-      a.setAttribute("download", a.textContent);
-      fig.appendChild(a);
+      ctx.putImageData(pix, 0, 0, 0, 0, w, h);
+      rv.src = canvas.toDataURL("image/png");
+      //document.body.appendChild(rv);
+      return rv;
     }
+    addEventListener("load", function load() {
+      function $$(e, el) (el || document).querySelectorAll(e);
+
+      removeEventListener("load", load, false);
+
+      for (var i of $$("img")) {
+        i.id = i.getAttribute("src").replace(/()\..*?$/, "");
+      }
+
+      for (var sec of $$("section")) {
+        var dims = parseInt(sec.dataset.dims, 10);
+        var figs = Array.map($$("figure", sec), function(e) e);
+        var rows = figs.length;
+        var rrows = figs.map(function(e) e.dataset.states == "two" ? 2 : 1).reduce(function(p,c) p + c, 0);
+        var cols = figs.map(function(e) $$("img", e).length).reduce(function(p,c) Math.max(p,c), 0);
+
+        var canvas = document.createElement("canvas");
+        canvas.setAttribute("height", rrows * dims);
+        canvas.setAttribute("width", cols * dims);
+        sec.appendChild(canvas);
+        canvas.style.display = "block";
+        canvas.style.border = "1px solid red";
+
+        var items = {};
+        var ctx = canvas.getContext("2d");
+        var y = 0;
+        for (var row of figs) {
+          var dis = row.dataset.states == "two";
+          var x = 0;
+          for (var i of $$("img", row)) {
+            ctx.drawImage(i, x, y);
+            var region = {top:y, bottom: y+i.height, left:x, right: x+i.width};
+            items[i.id] = region;
+            if (dis) {
+              ctx.save();
+              ctx.globalAlpha = 0.6;
+              ctx.drawImage(grayscale(i), x, y + dims);
+              ctx.restore();
+              var region = {top:y+dims, bottom: y+dims+i.height, left:x, right: x+i.width};
+              items[i.id + " disabled"] = region;
+            }
+            x += dims;
+          }
+          y += dis ? dims * 2 : dims;
+        }
+
+        //figs.forEach(function(e) e.parentNode.removeChild(e));
+        var ul = document.createElement("ul");
+        ul.style.listStyleType = "none";
+        var bi = canvas.toDataURL("image/png");
+        for (var [c,r] in Iterator(items)) {
+          var li = document.createElement("li");
+          li.style.backgroundImage = "-moz-image-rect(url(" + bi + ")," + r.top + "," + r.right + "," + r.bottom + "," + r.left + ")";
+          li.innerHTML = "<p>" + c + "</p><p><code>rect(" + r.top + "px," + r.right + "px," + r.bottom + "px," + r.left + "px)</code></p>";
+          ul.appendChild(li);
+        }
+        sec.appendChild(ul);
+      }
+    }, false);
   </script>
 </body>
